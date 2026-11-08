@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">JT PTT</string>
+    <string name="title_activity_main">JT PTT</string>
+    <string name="package_name">pe.net.jtelecomperu.jtptt</string>
+    <string name="custom_url_scheme">pe.net.jtelecomperu.jtptt</string>
+</resources>

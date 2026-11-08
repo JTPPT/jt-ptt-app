@@ -1,0 +1,33 @@
+name: Compilar APK
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@v3
+      - name: Compilar
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: JT-PTT-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+      - name: Publicar release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp android/app/build/outputs/apk/debug/app-debug.apk JT-PTT.apk
+          gh release delete apk-latest -y --cleanup-tag || true
+          gh release create apk-latest JT-PTT.apk --title "JT PTT APK" --notes "APK de instalación directa" 

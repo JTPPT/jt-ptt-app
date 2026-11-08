@@ -1,0 +1,7 @@
+{
+  "appId": "pe.net.jtelecomperu.jtptt",
+  "appName": "JT PTT",
+  "webDir": "www",
+  "server": { "url": "https://jtppt.jtelecomperu.net.pe", "androidScheme": "https", "errorPath": "index.html" },
+  "android": { "allowMixedContent": false }
+}
