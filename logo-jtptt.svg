@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+<defs>
+<linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#00e0b0"/><stop offset="1" stop-color="#3da5ff"/></linearGradient>
+<radialGradient id="bg" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#14233f"/><stop offset="1" stop-color="#070b14"/></radialGradient>
+<radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#00d6aa" stop-opacity=".35"/><stop offset="1" stop-color="#00d6aa" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1024" height="1024" fill="url(#bg)"/>
+<circle cx="512" cy="512" r="400" fill="url(#glow)"/>
+<!-- ondas de radio -->
+<g fill="none" stroke="url(#g)" stroke-linecap="round">
+<circle cx="512" cy="512" r="262" stroke-width="30" stroke-dasharray="520 1126" transform="rotate(-62 512 512)" opacity="1"/>
+<circle cx="512" cy="512" r="262" stroke-width="30" stroke-dasharray="520 1126" transform="rotate(118 512 512)" opacity="1"/>
+<circle cx="512" cy="512" r="332" stroke-width="22" stroke-dasharray="520 1566" transform="rotate(-62 512 512)" opacity=".55"/>
+<circle cx="512" cy="512" r="332" stroke-width="22" stroke-dasharray="520 1566" transform="rotate(118 512 512)" opacity=".55"/>
+</g>
+<!-- boton PTT -->
+<circle cx="512" cy="512" r="190" fill="url(#g)"/>
+<circle cx="512" cy="512" r="190" fill="none" stroke="#ffffff" stroke-opacity=".25" stroke-width="6"/>
+<text x="512" y="562" font-family="Poppins,Montserrat,DejaVu Sans,Arial" font-weight="800" font-size="168" text-anchor="middle" fill="#06121f" letter-spacing="-6">JT</text>
+</svg>
